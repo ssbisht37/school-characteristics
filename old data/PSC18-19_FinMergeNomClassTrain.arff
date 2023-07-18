@@ -1,0 +1,976 @@
+@relation 'Public_School_Characteristics_2018-19_?Miss-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C70-L70-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C52-L52-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C21-L21-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C22-L22-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C23-L23-weka.filters.unsupervised.attribute.StringToNominal-R19-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R70-weka.filters.unsupervised.attribute.Remove-R70-weka.filters.unsupervised.attribute.Remove-R36-weka.filters.unsupervised.attribute.ReplaceMissingWithUserConstant-A22-35-R0-Fyyyy-MM-dd\'T\'HH:mm:ss-weka.filters.unsupervised.attribute.Remove-R36-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C36-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C37-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C38-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C39-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C40-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C41-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C42-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C43-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C48-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C51-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C52-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C53-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C54-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C55-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C56-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C57-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C58-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C59-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C60-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C61-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C62-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C63-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C64-Lfirst-last-M-weka.filters.unsupervised.attribute.NumericToNominal-R46-weka.filters.unsupervised.attribute.MergeManyValues-C46-LCity-R1,2,3-weka.filters.unsupervised.attribute.MergeManyValues-C46-LSuburb-R1,2,3-weka.filters.unsupervised.attribute.MergeManyValues-C46-LTown-R1,2,3-weka.filters.unsupervised.attribute.MergeManyValues-C46-LRural-R1,2,3-weka.filters.unsupervised.instance.Resample-S1-Z2.0-no-replacement-weka.filters.unsupervised.attribute.Remove-R3,5,9-13,15,47-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.attribute.Remove-R1-3,5-6,10-36,38,41-42,44-49,51-57,59,61'
+
+@attribute STABR {AK,AL,AR,AS,AZ,CA,CO,CT,DC,DE,FL,GA,HI,IA,ID,IL,IN,KS,KY,LA,MA,MD,ME,MI,MN,MO,MS,MT,NC,ND,NE,NH,NJ,NM,NV,NY,OH,OK,OR,PA,PR,RI,SC,SD,TN,TX,UT,VA,VI,VT,WA,WI,WV,WY,BI,GU}
+@attribute GSLO {PK,09,KG,07,'M ',03,08,05,06,10,02,04,01,12,'N ',UG,11,AE}
+@attribute GSHI {05,12,06,02,08,01,07,09,04,03,KG,10,PK,11,'N ',UG,13,AE}
+@attribute VIRTUAL {'Not Virtual','Supplemental Virtual','Virtual with face to face options',N,M,'Full Virtual'}
+@attribute ULOCALE {City,Suburb,Town,Rural}
+@attribute TITLEI {1-Yes,'Not Applicable',Missing}
+@attribute STITLEI {1-Yes,'Not Applicable',2-No,Missing}
+@attribute ASALM numeric
+@attribute WHALF numeric
+@attribute SCHOOL_TYPE_TEXT {'Regular school','Alternative/other school','Special education school','Vocational school'}
+@attribute SCHOOL_LEVEL {Elementary,High,Other,'Not reported',Middle,Secondary,Prekindergarten,'Not applicable',Ungraded,'Adult Education'}
+@attribute CHARTER_TEXT {No,Yes,Missing}
+@attribute MAGNET_TEXT {No,Missing,Yes,'Not Applicable'}
+
+@data
+TX,PK,12,'Not Virtual',City,'Not Applicable','Not Applicable',0,7,'Alternative/other school',Other,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,11,169,'Regular school',Elementary,No,No
+LA,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',21,332,'Regular school',Elementary,No,No
+TX,PK,02,'Not Virtual',City,1-Yes,1-Yes,1,33,'Regular school',Elementary,No,No
+OH,09,12,'Not Virtual',Suburb,1-Yes,2-No,50,530,'Regular school',High,No,'Not Applicable'
+NV,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,212,308,'Regular school',High,No,Yes
+NC,03,05,'Not Virtual',Rural,1-Yes,1-Yes,1,89,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',6,94,'Regular school',Elementary,No,No
+PA,KG,06,'Not Virtual',Suburb,1-Yes,1-Yes,55,91,'Regular school',Elementary,No,No
+TX,07,08,'Not Virtual',Rural,1-Yes,1-Yes,4,117,'Regular school',Middle,No,No
+AL,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',7,240,'Regular school',Middle,No,No
+MI,06,08,'Not Virtual',Rural,1-Yes,2-No,0,112,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',54,137,'Regular school',Elementary,No,No
+PA,PK,05,'Not Virtual',City,1-Yes,1-Yes,2,59,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,247,'Regular school',Elementary,No,No
+CA,KG,05,'Not Virtual',City,1-Yes,1-Yes,0,6,'Regular school',Elementary,No,No
+FL,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,166,'Regular school',Elementary,No,Yes
+OR,KG,05,'Not Virtual',Town,1-Yes,1-Yes,1,125,'Regular school',Elementary,No,Missing
+MI,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,4,'Regular school',Elementary,Yes,No
+CO,PK,02,'Not Virtual',Town,'Not Applicable','Not Applicable',2,114,'Regular school',Elementary,No,No
+TX,PK,03,'Not Virtual',Rural,1-Yes,1-Yes,1,170,'Regular school',Elementary,No,No
+CA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',70,297,'Regular school',Middle,No,No
+GA,PK,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',5,290,'Regular school',Other,Yes,No
+NC,KG,12,'Not Virtual',Rural,1-Yes,2-No,0,299,'Regular school',Other,Yes,No
+CA,09,12,'Supplemental Virtual',City,'Not Applicable','Not Applicable',129,320,'Regular school',High,No,No
+NC,PK,08,'Not Virtual',City,'Not Applicable','Not Applicable',22,194,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Town,1-Yes,1-Yes,1,139,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,236,'Regular school',Elementary,No,No
+WI,PK,04,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',6,198,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,9,159,'Regular school',Elementary,No,No
+OR,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',4,127,'Regular school',Elementary,No,Missing
+TX,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',3,127,'Regular school',Elementary,No,No
+MI,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,32,145,'Regular school',Elementary,Yes,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,1,'Regular school',Elementary,Yes,No
+PA,KG,08,'Not Virtual',City,1-Yes,1-Yes,0,4,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',6,96,'Regular school',Elementary,No,No
+MI,PK,12,'Not Virtual',City,'Not Applicable','Not Applicable',1,29,'Special education school',Other,No,No
+MI,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,41,136,'Regular school',Elementary,No,No
+FL,KG,12,'Not Virtual',City,'Not Applicable','Not Applicable',0,4,'Alternative/other school',Other,No,No
+AL,PK,08,'Not Virtual',Rural,1-Yes,1-Yes,0,32,'Regular school',Elementary,No,No
+MI,06,12,'Not Virtual',City,'Not Applicable','Not Applicable',1,40,'Alternative/other school',High,No,No
+UT,KG,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',3,357,'Regular school',Elementary,No,No
+NC,09,12,'Not Virtual',Town,1-Yes,1-Yes,9,228,'Regular school',High,No,No
+NC,06,08,'Not Virtual',Rural,1-Yes,1-Yes,2,173,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,10,'Regular school',Elementary,No,No
+AL,06,08,'Not Virtual',Town,1-Yes,1-Yes,0,114,'Regular school',Middle,No,No
+SC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,131,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,5,'Regular school',Elementary,No,No
+TX,PK,08,'Not Virtual',Suburb,1-Yes,1-Yes,0,4,'Regular school',Elementary,Yes,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,17,123,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,8,'Regular school',Elementary,No,No
+NC,08,12,'Not Virtual',City,1-Yes,1-Yes,0,0,'Alternative/other school',High,No,No
+WY,KG,06,'Not Virtual',Rural,'Not Applicable','Not Applicable',3,122,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,1-Yes,1,0,'Alternative/other school',High,No,No
+TX,06,09,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Middle,No,No
+OR,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',2,87,'Regular school',Middle,Yes,Missing
+OH,09,12,'Not Virtual',Town,1-Yes,1-Yes,1,208,'Regular school',High,No,'Not Applicable'
+OR,KG,05,'Not Virtual',Town,1-Yes,1-Yes,2,145,'Regular school',Elementary,No,Missing
+NC,06,08,'Not Virtual',City,1-Yes,1-Yes,2,15,'Regular school',Middle,No,No
+MI,06,08,'Not Virtual',City,1-Yes,1-Yes,8,224,'Regular school',Middle,No,No
+MI,07,12,'Not Virtual',City,1-Yes,1-Yes,0,2,'Alternative/other school',High,No,Yes
+NY,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,1,180,'Regular school',Elementary,No,No
+PA,05,08,'Not Virtual',City,1-Yes,1-Yes,2,8,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,8,27,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',Rural,1-Yes,2-No,0,232,'Regular school',Middle,No,No
+WA,KG,06,'Not Virtual',Rural,1-Yes,1-Yes,1,24,'Regular school',Elementary,No,No
+OR,KG,06,'Not Virtual',Town,1-Yes,1-Yes,7,185,'Regular school',Elementary,No,Missing
+TX,PK,KG,'Not Virtual',Rural,1-Yes,1-Yes,0,9,'Regular school',Elementary,No,No
+TX,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,4,107,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',12,210,'Regular school',High,No,No
+NY,05,05,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',Middle,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,49,'Regular school',Elementary,No,No
+MI,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,39,179,'Regular school',Elementary,Yes,No
+MI,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,94,'Regular school',High,No,Yes
+FL,06,08,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Middle,No,No
+NE,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',15,266,'Regular school',Middle,Missing,Missing
+AZ,06,08,'Not Virtual',City,1-Yes,1-Yes,1,186,'Regular school',Middle,No,'Not Applicable'
+PA,KG,12,'Not Virtual',City,1-Yes,1-Yes,1,16,'Regular school',Other,Yes,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,127,'Regular school',Elementary,No,No
+GA,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,33,49,'Regular school',Middle,No,No
+FL,06,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',100,118,'Regular school',Middle,Yes,No
+PA,09,12,'Not Virtual',Suburb,1-Yes,2-No,8,287,'Regular school',High,No,No
+TX,07,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,1,'Alternative/other school',High,No,No
+TX,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,28,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,8,101,'Regular school',Elementary,No,No
+NJ,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,4,52,'Regular school',Elementary,No,Missing
+SD,09,12,'Supplemental Virtual',Town,'Not Applicable','Not Applicable',0,9,'Regular school',High,No,Missing
+MI,KG,05,'Not Virtual',Suburb,1-Yes,2-No,3,143,'Regular school',Elementary,No,No
+CA,09,12,'Supplemental Virtual',Town,1-Yes,1-Yes,0,0,'Alternative/other school',High,No,No
+PA,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,328,'Regular school',High,No,No
+TX,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,4,91,'Regular school',Elementary,No,No
+WA,PK,05,'Not Virtual',Town,1-Yes,1-Yes,0,19,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,1,'Regular school',Elementary,No,No
+NE,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,31,'Regular school',Elementary,Missing,Missing
+FL,PK,08,'Not Virtual',Rural,1-Yes,1-Yes,11,214,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,8,109,'Regular school',Elementary,No,No
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,2,239,'Regular school',Middle,No,No
+PA,KG,05,'Not Virtual',Suburb,1-Yes,2-No,7,279,'Regular school',Elementary,No,No
+NC,KG,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,72,'Regular school',Elementary,Yes,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,31,275,'Regular school',High,No,Yes
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,2,1,'Regular school',Middle,No,Yes
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,No,Yes
+WA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,17,122,'Regular school',Elementary,No,No
+MI,03,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,12,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,1,63,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',Town,1-Yes,1-Yes,4,24,'Regular school',High,No,No
+OH,02,05,'Not Virtual',Suburb,1-Yes,2-No,44,178,'Regular school',Elementary,No,'Not Applicable'
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,60,89,'Regular school',Elementary,No,No
+NY,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,10,76,'Regular school',Elementary,No,Yes
+CA,09,12,'Not Virtual',City,1-Yes,2-No,29,5,'Alternative/other school',High,No,No
+VA,07,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',91,336,'Regular school',Middle,No,No
+NY,01,09,'Not Virtual',Suburb,1-Yes,1-Yes,0,7,'Regular school',Other,No,No
+FL,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,4,530,'Regular school',High,No,No
+AZ,KG,03,'Not Virtual',Town,1-Yes,1-Yes,2,155,'Regular school',Elementary,No,'Not Applicable'
+FL,09,12,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',High,No,Yes
+TX,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',5,162,'Regular school',Elementary,No,No
+NE,PK,05,'Not Virtual',Town,1-Yes,1-Yes,3,140,'Regular school',Elementary,Missing,Missing
+FL,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,29,316,'Regular school',High,No,No
+TX,PK,05,'Not Virtual',Town,1-Yes,1-Yes,2,32,'Regular school',Elementary,No,Yes
+AZ,KG,06,'Not Virtual',Town,1-Yes,1-Yes,0,111,'Regular school',Elementary,No,'Not Applicable'
+CO,09,12,'Not Virtual',City,'Not Applicable','Not Applicable',4,66,'Alternative/other school',High,No,No
+MT,03,05,'Not Virtual',City,'Not Applicable','Not Applicable',1,220,'Regular school',Elementary,Missing,Missing
+CA,KG,06,'Not Virtual',Suburb,1-Yes,2-No,45,174,'Regular school',Elementary,No,No
+PA,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',30,636,'Regular school',High,No,No
+TX,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,12,121,'Regular school',Elementary,No,No
+CA,KG,12,'Not Virtual',Suburb,1-Yes,2-No,1,15,'Alternative/other school',Other,No,No
+ID,PK,06,'Not Virtual',City,1-Yes,1-Yes,8,167,'Regular school',Elementary,No,No
+VA,06,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',3,262,'Regular school',Middle,No,No
+NE,PK,06,'Not Virtual',Rural,1-Yes,2-No,0,126,'Regular school',Elementary,Missing,Missing
+AL,06,08,'Not Virtual',City,1-Yes,1-Yes,0,13,'Regular school',Middle,No,No
+OH,09,12,'Not Virtual',Suburb,1-Yes,2-No,2,101,'Regular school',High,No,'Not Applicable'
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,12,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,2-No,21,102,'Regular school',Elementary,No,No
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,43,73,'Regular school',Middle,No,No
+CA,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',382,271,'Regular school',High,No,No
+OH,04,08,'Not Virtual',Rural,1-Yes,1-Yes,0,200,'Regular school',Middle,No,'Not Applicable'
+GA,09,12,'Not Virtual',City,'Not Applicable','Not Applicable',8,580,'Regular school',High,No,No
+GA,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,1,2,'Regular school',Middle,Yes,No
+PA,09,12,'Not Virtual',City,1-Yes,1-Yes,55,365,'Regular school',High,No,No
+MT,07,08,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,8,'Regular school',Middle,Missing,Missing
+TX,01,03,'Not Virtual',Rural,1-Yes,1-Yes,2,88,'Regular school',Elementary,No,No
+PA,KG,04,'Not Virtual',Suburb,1-Yes,1-Yes,5,44,'Regular school',Elementary,No,No
+MI,KG,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,27,'Alternative/other school',Other,No,No
+AK,PK,06,'Not Virtual',Rural,1-Yes,2-No,1,59,'Regular school',Elementary,No,No
+GA,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,6,46,'Regular school',Middle,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,12,89,'Regular school',Elementary,No,No
+IN,KG,05,'Not Virtual',City,1-Yes,1-Yes,1,396,'Regular school',Elementary,No,No
+NJ,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,29,'Regular school',Elementary,No,Missing
+UT,PK,06,'Not Virtual',City,'Not Applicable','Not Applicable',5,116,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',4,203,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',207,55,'Regular school',Elementary,No,No
+NC,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',92,666,'Regular school',High,No,No
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,31,328,'Regular school',Middle,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,25,238,'Regular school',High,No,No
+MI,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,144,'Regular school',Elementary,No,No
+VA,05,06,'Not Virtual',City,'Not Applicable','Not Applicable',21,122,'Regular school',Middle,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,39,46,'Regular school',Elementary,No,No
+CA,09,12,'Supplemental Virtual',City,1-Yes,1-Yes,44,98,'Regular school',High,No,No
+PA,KG,05,'Not Virtual',Rural,1-Yes,2-No,1,150,'Regular school',Elementary,No,No
+AL,04,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',8,226,'Regular school',Middle,No,No
+CA,KG,05,'Not Virtual',City,1-Yes,2-No,0,0,'Regular school',Elementary,Yes,No
+TX,PK,04,'Not Virtual',City,'Not Applicable','Not Applicable',0,1,'Regular school',Elementary,Yes,No
+PA,KG,04,'Not Virtual',Suburb,1-Yes,1-Yes,4,61,'Regular school',Elementary,No,No
+FL,PK,08,'Not Virtual',Suburb,1-Yes,1-Yes,2,35,'Special education school',Elementary,No,No
+KS,09,12,'Not Virtual',City,1-Yes,1-Yes,0,20,'Regular school',High,Yes,No
+FL,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,9,182,'Regular school',Elementary,No,No
+NC,09,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',5,417,'Regular school',High,No,No
+AZ,PK,06,'Not Virtual',City,1-Yes,1-Yes,2,74,'Regular school',Elementary,No,'Not Applicable'
+TX,09,12,'Not Virtual',Rural,1-Yes,1-Yes,15,58,'Regular school',High,No,No
+OH,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,166,'Regular school',High,No,'Not Applicable'
+FL,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',46,397,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,1-Yes,1,1,'Alternative/other school',High,No,No
+GA,06,12,'Not Virtual',Rural,1-Yes,1-Yes,0,18,'Regular school',High,No,No
+OH,09,12,'Not Virtual',Suburb,1-Yes,2-No,84,565,'Regular school',High,No,'Not Applicable'
+GA,08,11,'Not Virtual',Suburb,1-Yes,1-Yes,2,0,'Regular school',Secondary,No,No
+WY,01,03,'Not Virtual',Town,1-Yes,1-Yes,0,51,'Regular school',Elementary,No,No
+VA,09,12,'Supplemental Virtual',City,'Not Applicable','Not Applicable',4,96,'Regular school',High,No,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,Yes
+CA,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,1,'Regular school',High,Yes,No
+SC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',6,247,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',Rural,1-Yes,1-Yes,5,112,'Regular school',Middle,No,No
+CA,09,12,'Supplemental Virtual',City,1-Yes,2-No,1092,207,'Regular school',High,No,No
+NJ,PK,08,'Not Virtual',Suburb,1-Yes,2-No,2,50,'Regular school',Elementary,No,Missing
+NY,02,06,'Not Virtual',Suburb,1-Yes,1-Yes,14,145,'Regular school',Elementary,No,No
+NE,07,12,'Not Virtual',Town,'Not Applicable','Not Applicable',1,105,'Regular school',High,Missing,Missing
+OR,KG,05,'Not Virtual',Town,1-Yes,1-Yes,0,66,'Regular school',Elementary,No,Missing
+MI,KG,05,'Not Virtual',City,1-Yes,1-Yes,23,57,'Regular school',Elementary,No,No
+VA,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',33,242,'Regular school',High,No,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',10,119,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,5,'Regular school',High,No,No
+VA,PK,05,'Not Virtual',Town,'Not Applicable','Not Applicable',4,270,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',20,352,'Regular school',Elementary,No,No
+TX,KG,04,'Not Virtual',City,1-Yes,1-Yes,42,123,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,48,109,'Regular school',High,No,No
+CO,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,23,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,4,'Regular school',Elementary,No,No
+NC,09,12,'Supplemental Virtual',Rural,1-Yes,1-Yes,6,363,'Regular school',High,No,No
+OR,KG,05,'Not Virtual',City,1-Yes,1-Yes,4,209,'Regular school',Elementary,No,Missing
+GA,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,9,438,'Regular school',High,No,No
+AZ,KG,06,'Not Virtual',Suburb,1-Yes,2-No,10,238,'Regular school',Elementary,No,'Not Applicable'
+NY,09,12,'Not Virtual',Suburb,1-Yes,2-No,106,856,'Regular school',High,No,No
+CA,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',320,501,'Regular school',High,No,No
+TX,07,12,'Not Virtual',Rural,1-Yes,1-Yes,0,85,'Regular school',High,No,No
+PA,06,08,'Not Virtual',Rural,1-Yes,2-No,0,104,'Regular school',Middle,No,No
+OH,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,7,167,'Regular school',Elementary,No,'Not Applicable'
+NY,06,08,'Not Virtual',Suburb,1-Yes,2-No,18,269,'Regular school',Middle,No,No
+TX,03,05,'Not Virtual',Rural,1-Yes,1-Yes,0,42,'Regular school',Elementary,No,No
+TX,07,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',25,379,'Regular school',Middle,No,No
+NC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,53,'Regular school',Elementary,No,No
+OR,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',0,14,'Regular school',Elementary,Yes,Missing
+GA,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,20,'Regular school',Elementary,No,No
+NY,KG,08,'Not Virtual',Rural,1-Yes,2-No,2,78,'Regular school',Elementary,No,No
+CA,KG,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',32,143,'Regular school',Elementary,No,No
+MI,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,163,'Regular school',Elementary,No,No
+FL,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,5,41,'Regular school',Elementary,No,No
+NE,01,02,'Not Virtual',Town,1-Yes,1-Yes,5,67,'Regular school',Elementary,Missing,Missing
+TX,PK,06,'Not Virtual',Suburb,1-Yes,1-Yes,7,13,'Regular school',Elementary,No,No
+PA,KG,06,'Not Virtual',City,1-Yes,1-Yes,1,156,'Regular school',Elementary,No,No
+CA,09,12,'Supplemental Virtual',City,'Not Applicable','Not Applicable',96,689,'Regular school',High,No,No
+TX,02,05,'Not Virtual',Rural,1-Yes,1-Yes,0,28,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',City,1-Yes,1-Yes,1,9,'Regular school',Middle,No,No
+NY,07,12,'Not Virtual',Suburb,1-Yes,1-Yes,23,25,'Regular school',High,No,Yes
+FL,06,12,'Not Virtual',City,'Not Applicable','Not Applicable',1,0,'Alternative/other school',High,No,No
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,10,267,'Regular school',Middle,No,No
+TX,PK,04,'Not Virtual',Suburb,'Not Applicable','Not Applicable',25,145,'Regular school',Elementary,No,No
+PA,09,12,'Not Virtual',Suburb,1-Yes,2-No,2,267,'Regular school',High,No,No
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,3,11,'Regular school',Middle,No,Yes
+OH,09,12,'Not Virtual',Rural,1-Yes,2-No,0,288,'Regular school',High,No,'Not Applicable'
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,5,138,'Regular school',Middle,No,No
+TX,03,05,'Not Virtual',Rural,1-Yes,1-Yes,0,123,'Regular school',Elementary,No,No
+OR,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',6,113,'Regular school',Elementary,No,Missing
+OR,KG,05,'Not Virtual',City,1-Yes,1-Yes,15,118,'Regular school',Elementary,No,Missing
+SC,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,180,'Regular school',Elementary,No,No
+UT,10,12,'Not Virtual',City,'Not Applicable','Not Applicable',7,434,'Regular school',High,No,No
+MI,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',4,269,'Regular school',Middle,No,Yes
+AL,03,06,'Not Virtual',Suburb,1-Yes,1-Yes,0,6,'Regular school',Elementary,No,No
+NE,PK,PK,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,9,'Regular school',Prekindergarten,Missing,Missing
+MI,06,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',4,213,'Regular school',Middle,No,No
+MI,KG,04,'Not Virtual',Suburb,1-Yes,1-Yes,6,116,'Regular school',Elementary,No,No
+AL,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',0,119,'Regular school',High,No,No
+VA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,19,37,'Regular school',Elementary,No,No
+PA,09,12,'Not Virtual',Suburb,1-Yes,2-No,3,430,'Regular school',High,No,No
+AZ,06,08,'Not Virtual',City,1-Yes,2-No,23,228,'Regular school',Middle,No,'Not Applicable'
+VA,09,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',0,180,'Regular school',High,No,No
+ID,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,0,112,'Regular school',Elementary,Yes,No
+AZ,06,08,'Not Virtual',Town,1-Yes,1-Yes,6,158,'Regular school',Middle,No,'Not Applicable'
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,4,3,'Regular school',High,Yes,No
+VA,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,41,'Regular school',Elementary,No,No
+UT,PK,06,'Not Virtual',City,1-Yes,1-Yes,3,201,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',City,1-Yes,1-Yes,601,26,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',Town,1-Yes,1-Yes,44,300,'Regular school',High,No,No
+OH,PK,08,'Not Virtual',Rural,1-Yes,1-Yes,0,201,'Regular school',Elementary,No,'Not Applicable'
+AL,PK,04,'Not Virtual',Town,1-Yes,1-Yes,9,247,'Regular school',Elementary,No,No
+FL,06,08,'Not Virtual',City,1-Yes,1-Yes,22,99,'Regular school',Middle,No,Yes
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,1,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',1,123,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,2,215,'Regular school',Elementary,No,No
+NY,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',37,396,'Regular school',Middle,No,No
+VA,07,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',140,127,'Regular school',Middle,No,No
+AZ,09,12,'Not Virtual',Suburb,1-Yes,2-No,35,397,'Regular school',High,No,'Not Applicable'
+FL,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,2,'Regular school',Elementary,Yes,No
+PA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,340,'Regular school',Elementary,No,No
+PA,KG,03,'Not Virtual',Suburb,1-Yes,1-Yes,0,98,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',540,627,'Regular school',High,No,No
+TX,PK,12,'Not Virtual',City,'Not Applicable','Not Applicable',4,20,'Alternative/other school',Other,No,No
+VA,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,127,'Regular school',Elementary,No,No
+MI,PK,08,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,No,No
+FL,PK,08,'Not Virtual',City,1-Yes,1-Yes,0,36,'Regular school',Elementary,Yes,No
+AK,PK,06,'Not Virtual',City,1-Yes,1-Yes,6,57,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,7,'Regular school',Elementary,No,No
+MT,07,08,'Supplemental Virtual',Rural,1-Yes,2-No,0,9,'Regular school',Middle,Missing,Missing
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,25,264,'Regular school',Elementary,No,No
+NC,09,12,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,243,'Regular school',High,No,No
+WA,09,12,'Supplemental Virtual',Suburb,1-Yes,1-Yes,67,232,'Regular school',High,No,No
+MT,PK,06,'Not Virtual',Rural,1-Yes,2-No,0,34,'Regular school',Elementary,Missing,Missing
+VA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',7,227,'Regular school',Middle,No,No
+CA,KG,06,'Not Virtual',City,1-Yes,1-Yes,24,17,'Regular school',Elementary,No,No
+NY,KG,06,'Not Virtual',Suburb,1-Yes,1-Yes,3,82,'Regular school',Elementary,No,No
+WA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,10,34,'Regular school',Elementary,No,No
+OH,KG,05,'Not Virtual',Suburb,1-Yes,2-No,3,172,'Regular school',Elementary,No,'Not Applicable'
+TX,KG,12,'Not Virtual',City,'Not Applicable','Not Applicable',0,4,'Alternative/other school',Other,No,No
+OR,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',12,148,'Regular school',Elementary,No,Missing
+NY,KG,03,'Not Virtual',Town,1-Yes,1-Yes,1,30,'Regular school',Elementary,No,No
+TX,KG,05,'Not Virtual',Town,1-Yes,1-Yes,2,82,'Regular school',Elementary,No,No
+OR,KG,05,'Not Virtual',Town,1-Yes,1-Yes,4,161,'Regular school',Elementary,No,Missing
+FL,06,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,1,'Special education school',High,No,No
+NM,07,08,'Not Virtual',Rural,1-Yes,1-Yes,0,0,'Regular school',Middle,No,No
+CO,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,4,194,'Regular school',Elementary,No,No
+NC,KG,06,'Not Virtual',Rural,1-Yes,1-Yes,1,199,'Regular school',Elementary,No,No
+VA,04,05,'Not Virtual',Suburb,1-Yes,1-Yes,4,59,'Regular school',Elementary,No,No
+PA,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',13,448,'Regular school',High,No,No
+NY,KG,12,'Not Virtual',Rural,1-Yes,1-Yes,0,136,'Regular school',Other,No,No
+OH,05,08,'Not Virtual',Suburb,1-Yes,2-No,7,181,'Regular school',Middle,No,'Not Applicable'
+NC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,205,'Regular school',Elementary,No,No
+WA,KG,05,'Not Virtual',City,1-Yes,1-Yes,10,167,'Regular school',Elementary,No,No
+FL,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,288,'Regular school',Elementary,No,No
+TX,03,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,40,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,9,'Regular school',Elementary,No,No
+ID,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,22,'Regular school',Elementary,No,No
+PA,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,504,'Regular school',High,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,14,'Regular school',Elementary,No,No
+FL,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,59,265,'Regular school',High,No,Yes
+TX,06,09,'Not Virtual',City,1-Yes,1-Yes,3,9,'Regular school',Middle,No,No
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,28,305,'Regular school',Middle,No,No
+AK,KG,12,'Not Virtual',Rural,1-Yes,1-Yes,0,0,'Regular school',Other,No,No
+FL,PK,PK,'Not Virtual',Town,'Not Applicable','Not Applicable',0,7,'Regular school',Prekindergarten,No,No
+FL,06,08,'Not Virtual',City,1-Yes,1-Yes,3,20,'Regular school',Middle,No,Yes
+PA,KG,01,'Not Virtual',Town,1-Yes,1-Yes,1,106,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,15,59,'Regular school',Elementary,No,No
+CO,PK,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',193,886,'Regular school',Elementary,Yes,No
+TX,08,12,'Not Virtual',Rural,1-Yes,1-Yes,0,34,'Regular school',High,No,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,103,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,118,'Regular school',Elementary,No,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,2-No,11,253,'Regular school',Middle,No,'Not Applicable'
+NY,KG,05,'Not Virtual',City,1-Yes,1-Yes,1,8,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,4,'Regular school',Elementary,No,No
+AL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,52,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,2-No,32,159,'Regular school',Elementary,No,No
+KS,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',14,197,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,23,174,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,33,23,'Vocational school',High,No,No
+UT,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,330,'Regular school',Elementary,No,No
+RI,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',9,421,'Regular school',High,No,Missing
+UT,KG,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',3,115,'Regular school',Elementary,No,No
+OH,05,08,'Not Virtual',Rural,1-Yes,1-Yes,2,198,'Regular school',Middle,No,'Not Applicable'
+NY,KG,05,'Not Virtual',Suburb,1-Yes,2-No,12,76,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,17,138,'Regular school',Elementary,No,No
+ND,09,12,'Not Virtual',City,'Not Applicable','Not Applicable',13,401,'Regular school',High,Missing,Missing
+VA,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',18,171,'Regular school',High,No,No
+OH,07,12,'Not Virtual',Rural,1-Yes,2-No,0,212,'Regular school',High,No,'Not Applicable'
+NJ,KG,04,'Not Virtual',Suburb,1-Yes,1-Yes,24,12,'Regular school',Elementary,No,Missing
+NC,09,10,'Supplemental Virtual',City,'Not Applicable','Not Applicable',0,42,'Regular school',Secondary,No,No
+TX,PK,PK,'Not Virtual',Suburb,1-Yes,1-Yes,18,51,'Regular school',Prekindergarten,No,No
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,2,1,'Regular school',Middle,Yes,No
+FL,09,12,'Not Virtual',Town,1-Yes,1-Yes,7,506,'Regular school',High,No,No
+MI,KG,12,'Not Virtual',Rural,1-Yes,2-No,0,123,'Regular school',Other,No,No
+KS,09,12,'Not Virtual',City,1-Yes,2-No,96,494,'Regular school',High,No,No
+TX,06,08,'Not Virtual',Town,1-Yes,1-Yes,0,35,'Regular school',Middle,No,No
+SD,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,0,10,'Regular school',Elementary,No,Missing
+FL,06,08,'Not Virtual',Suburb,1-Yes,2-No,3,201,'Regular school',Middle,No,No
+SD,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,29,'Regular school',Middle,No,Missing
+TX,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',68,145,'Regular school',Elementary,Yes,No
+MO,KG,05,'Not Virtual',Town,1-Yes,1-Yes,10,267,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,10,3,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,226,71,'Regular school',Elementary,No,No
+PA,KG,03,'Not Virtual',Rural,1-Yes,1-Yes,1,261,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',62,216,'Regular school',Middle,No,No
+MI,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,70,'Regular school',Elementary,No,No
+MO,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,62,'Regular school',Elementary,No,No
+IL,09,12,'Not Virtual',City,1-Yes,2-No,47,267,'Regular school',High,No,No
+CA,09,12,'Not Virtual',Suburb,1-Yes,2-No,141,287,'Regular school',High,No,No
+GA,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',7,292,'Regular school',High,No,No
+AL,04,06,'Not Virtual',Town,1-Yes,1-Yes,1,206,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',5,189,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,2,104,'Regular school',Elementary,No,Yes
+OR,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,0,121,'Regular school',Elementary,No,Missing
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,150,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,42,90,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,191,'Regular school',Elementary,No,No
+CA,10,12,'Not Virtual',Suburb,1-Yes,1-Yes,2,5,'Alternative/other school',High,No,No
+CA,KG,08,'Not Virtual',City,'Not Applicable','Not Applicable',203,16,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,17,'Regular school',Elementary,No,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,17,225,'Regular school',Middle,No,'Not Applicable'
+AL,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,Yes
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+MD,09,12,'Not Virtual',City,1-Yes,1-Yes,25,347,'Regular school',High,No,Yes
+NJ,05,06,'Not Virtual',Suburb,1-Yes,2-No,3,88,'Regular school',Middle,No,Missing
+NV,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',13,200,'Regular school',Elementary,No,No
+VA,09,12,'Supplemental Virtual',City,'Not Applicable','Not Applicable',81,361,'Regular school',High,No,No
+UT,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',4,189,'Regular school',Elementary,No,No
+TX,KG,08,'Not Virtual',City,1-Yes,1-Yes,0,20,'Regular school',Elementary,Yes,No
+TX,04,06,'Not Virtual',Rural,1-Yes,1-Yes,2,216,'Regular school',Middle,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,6,34,'Regular school',Elementary,No,No
+CA,KG,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',0,4,'Regular school',Other,Yes,Yes
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,14,320,'Regular school',Middle,No,No
+NY,06,11,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,4,'Special education school',Secondary,No,No
+CA,07,08,'Not Virtual',Suburb,1-Yes,2-No,60,231,'Regular school',Middle,No,No
+NE,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,49,'Regular school',Elementary,Missing,Missing
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,8,'Regular school',Elementary,No,No
+WA,PK,05,'Not Virtual',City,1-Yes,2-No,2,117,'Regular school',Elementary,No,No
+MI,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,25,'Regular school',High,Yes,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,7,148,'Regular school',Middle,No,'Not Applicable'
+NY,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',32,181,'Regular school',High,No,No
+PA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,6,73,'Regular school',Elementary,No,No
+OH,KG,06,'Not Virtual',Town,1-Yes,1-Yes,0,183,'Regular school',Elementary,No,'Not Applicable'
+VA,KG,05,'Not Virtual',Town,1-Yes,1-Yes,6,99,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,7,6,'Regular school',Elementary,No,No
+FL,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,36,171,'Regular school',High,No,Yes
+GA,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,3,67,'Regular school',Middle,No,No
+MO,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,1,29,'Vocational school',High,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,83,56,'Regular school',Elementary,No,No
+TX,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',52,36,'Alternative/other school',Elementary,Yes,No
+UT,PK,KG,'Not Virtual',City,'Not Applicable','Not Applicable',0,21,'Special education school',Elementary,No,No
+NJ,PK,KG,'Not Virtual',Suburb,'Not Applicable','Not Applicable',23,4,'Regular school',Elementary,No,Missing
+TX,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',10,156,'Regular school',Elementary,No,No
+OH,PK,05,'Not Virtual',Rural,1-Yes,2-No,0,232,'Regular school',Elementary,No,'Not Applicable'
+ID,03,05,'Not Virtual',Town,1-Yes,1-Yes,0,81,'Regular school',Elementary,No,No
+MI,KG,08,'Not Virtual',City,1-Yes,1-Yes,2,1,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',6,67,'Regular school',Elementary,No,No
+NV,PK,04,'Not Virtual',Town,1-Yes,1-Yes,4,137,'Regular school',Elementary,No,No
+MO,PK,05,'Not Virtual',Town,1-Yes,2-No,0,253,'Regular school',Elementary,No,No
+PA,PK,04,'Not Virtual',Town,1-Yes,1-Yes,0,163,'Regular school',Elementary,No,No
+AZ,PK,12,'Not Virtual',Suburb,1-Yes,1-Yes,3,35,'Regular school',Other,No,'Not Applicable'
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,21,241,'Regular school',Middle,No,No
+NC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,1,105,'Regular school',Elementary,No,No
+TX,10,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,3,'Alternative/other school',High,No,No
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,4,59,'Regular school',Middle,No,No
+MD,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',95,158,'Regular school',Elementary,No,No
+OH,01,05,'Not Virtual',Suburb,1-Yes,1-Yes,5,151,'Regular school',Elementary,No,'Not Applicable'
+TX,09,12,'Not Virtual',City,1-Yes,2-No,105,495,'Regular school',High,No,No
+AZ,07,12,'Not Virtual',Suburb,1-Yes,2-No,28,675,'Regular school',High,No,'Not Applicable'
+AL,01,06,'Not Virtual',Town,1-Yes,1-Yes,11,137,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,10,20,'Regular school',Elementary,No,No
+PA,05,06,'Not Virtual',Town,1-Yes,1-Yes,1,469,'Regular school',Middle,No,No
+GA,09,12,'Not Virtual',City,1-Yes,1-Yes,1,103,'Regular school',High,No,No
+TX,PK,06,'Not Virtual',City,1-Yes,1-Yes,9,25,'Regular school',Elementary,Yes,No
+TX,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',122,1118,'Regular school',High,No,No
+OR,KG,05,'Not Virtual',Town,1-Yes,1-Yes,5,112,'Regular school',Elementary,No,Missing
+TX,05,09,'Not Virtual',Rural,1-Yes,1-Yes,1,5,'Regular school',Middle,No,No
+UT,KG,06,'Not Virtual',Suburb,1-Yes,1-Yes,3,166,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,2-No,323,16,'Regular school',High,No,No
+TX,06,08,'Not Virtual',Town,1-Yes,1-Yes,1,91,'Regular school',Middle,No,No
+LA,08,09,'Not Virtual',Suburb,1-Yes,1-Yes,2,233,'Regular school',Secondary,No,No
+VA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',18,360,'Regular school',Middle,No,No
+NY,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,90,'Regular school',Elementary,No,No
+PA,05,09,'Not Virtual',City,1-Yes,1-Yes,13,2,'Regular school',Middle,Yes,No
+OH,02,06,'Not Virtual',Suburb,1-Yes,2-No,5,272,'Regular school',Elementary,No,'Not Applicable'
+NC,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,0,72,'Regular school',Elementary,Yes,No
+PA,KG,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,158,'Regular school',Elementary,No,No
+NY,PK,01,'Not Virtual',Suburb,'Not Applicable','Not Applicable',5,182,'Regular school',Elementary,No,No
+WA,KG,06,'Not Virtual',Suburb,1-Yes,2-No,42,127,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,4,4,'Regular school',High,Yes,No
+NC,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',25,668,'Regular school',High,No,No
+GA,06,08,'Not Virtual',City,1-Yes,1-Yes,5,112,'Regular school',Middle,No,No
+NC,KG,12,'Not Virtual',Town,1-Yes,1-Yes,0,7,'Alternative/other school',Other,No,No
+TX,PK,06,'Not Virtual',City,1-Yes,1-Yes,11,14,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,4,84,'Regular school',Elementary,No,No
+VA,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',22,376,'Regular school',Middle,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,56,41,'Vocational school',High,No,No
+PA,KG,08,'Not Virtual',City,1-Yes,1-Yes,6,1,'Regular school',Elementary,No,No
+NY,PK,08,'Not Virtual',City,1-Yes,1-Yes,0,1,'Regular school',Elementary,No,No
+MI,KG,04,'Not Virtual',Rural,'Not Applicable','Not Applicable',1,194,'Regular school',Elementary,No,No
+OH,KG,06,'Not Virtual',Suburb,1-Yes,2-No,16,242,'Regular school',Elementary,No,'Not Applicable'
+OR,KG,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',13,150,'Regular school',Elementary,Yes,Missing
+VA,09,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',14,359,'Regular school',High,No,No
+PA,07,12,'Not Virtual',Suburb,1-Yes,2-No,2,167,'Regular school',High,No,No
+SC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',7,138,'Regular school',Elementary,No,No
+FL,06,08,'Not Virtual',City,1-Yes,1-Yes,2,98,'Regular school',Middle,Yes,No
+SD,KG,04,'Not Virtual',Rural,1-Yes,1-Yes,0,48,'Regular school',Elementary,No,Missing
+MI,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,35,222,'Regular school',Middle,No,No
+CA,KG,06,'Not Virtual',Suburb,1-Yes,2-No,2,9,'Regular school',Elementary,Yes,No
+TX,PK,04,'Not Virtual',Suburb,1-Yes,1-Yes,59,32,'Regular school',Elementary,No,No
+SC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',6,360,'Regular school',Elementary,No,No
+TX,PK,02,'Not Virtual',Town,1-Yes,1-Yes,0,7,'Regular school',Elementary,No,No
+OR,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,52,60,'Regular school',Middle,No,Missing
+TX,07,08,'Not Virtual',Town,1-Yes,1-Yes,5,10,'Regular school',Middle,No,No
+MT,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,39,'Regular school',Elementary,Missing,Missing
+VA,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',23,254,'Regular school',High,No,No
+AK,PK,12,'Supplemental Virtual',Rural,1-Yes,2-No,0,9,'Regular school',Other,No,No
+PA,05,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',21,308,'Regular school',Middle,No,No
+TX,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,81,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,22,'Regular school',Elementary,No,No
+CA,09,12,'Supplemental Virtual',City,1-Yes,2-No,102,228,'Regular school',High,No,No
+PA,07,08,'Not Virtual',Suburb,1-Yes,1-Yes,0,148,'Regular school',Middle,No,No
+GA,08,12,'Not Virtual',Rural,1-Yes,1-Yes,0,16,'Regular school',High,No,No
+MI,KG,05,'Not Virtual',City,1-Yes,1-Yes,3,100,'Regular school',Elementary,No,No
+NE,07,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,69,'Regular school',High,Missing,Missing
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+AL,PK,04,'Not Virtual',Town,1-Yes,1-Yes,3,248,'Regular school',Elementary,No,No
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,4,19,'Regular school',Middle,No,No
+NY,10,12,'Not Virtual',City,1-Yes,1-Yes,5,11,'Regular school',High,No,No
+VA,PK,05,'Not Virtual',Town,1-Yes,1-Yes,2,207,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,193,'Regular school',High,No,No
+TX,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,1,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,22,10,'Regular school',Elementary,No,No
+NY,KG,03,'Not Virtual',Suburb,1-Yes,2-No,6,176,'Regular school',Elementary,No,No
+TX,PK,04,'Not Virtual',Suburb,1-Yes,1-Yes,2,93,'Regular school',Elementary,No,No
+WI,PK,05,'Not Virtual',Rural,1-Yes,2-No,0,109,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,79,227,'Regular school',Middle,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,5,1,'Regular school',High,Yes,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,10,'Regular school',Elementary,No,No
+VA,09,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',0,143,'Regular school',High,No,No
+NY,03,12,'Not Virtual',City,1-Yes,1-Yes,7,30,'Regular school',Other,Yes,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,17,255,'Regular school',Elementary,No,No
+SD,09,12,'Supplemental Virtual',Rural,1-Yes,2-No,2,48,'Regular school',High,No,Missing
+OH,07,08,'Not Virtual',Town,1-Yes,1-Yes,1,116,'Regular school',Middle,No,'Not Applicable'
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,0,161,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,10,70,'Regular school',Elementary,No,No
+TX,PK,07,'Not Virtual',City,1-Yes,1-Yes,0,4,'Regular school',Elementary,No,No
+KS,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,5,228,'Regular school',Elementary,No,No
+MS,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,207,'Regular school',Elementary,No,No
+OH,PK,01,'Not Virtual',Town,1-Yes,1-Yes,1,173,'Regular school',Elementary,No,'Not Applicable'
+NY,04,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',11,32,'Regular school',Middle,No,No
+NE,05,08,'Not Virtual',Town,1-Yes,1-Yes,0,55,'Regular school',Middle,Missing,Missing
+OR,03,05,'Not Virtual',Rural,1-Yes,1-Yes,0,81,'Regular school',Elementary,No,Missing
+GA,PK,05,'Not Virtual',Town,1-Yes,1-Yes,3,85,'Regular school',Elementary,No,No
+SD,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,20,'Regular school',Middle,No,Missing
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,1,1,'Regular school',Middle,No,No
+WY,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,113,'Regular school',Elementary,No,No
+PA,KG,08,'Not Virtual',City,1-Yes,1-Yes,3,2,'Regular school',Elementary,No,No
+UT,KG,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,211,'Regular school',Elementary,No,No
+MI,07,07,'Not Virtual',Town,'Not Applicable','Not Applicable',1,88,'Special education school',Middle,No,Yes
+MT,PK,05,'Not Virtual',Town,1-Yes,1-Yes,4,102,'Regular school',Elementary,Missing,Missing
+CA,09,12,'Not Virtual',City,1-Yes,1-Yes,43,28,'Special education school',High,No,No
+NY,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,2,153,'Regular school',Elementary,No,No
+AL,05,08,'Not Virtual',Rural,1-Yes,1-Yes,0,128,'Regular school',Middle,No,No
+WY,06,08,'Not Virtual',Rural,1-Yes,1-Yes,2,42,'Regular school',Middle,No,No
+OH,09,12,'Not Virtual',Town,1-Yes,1-Yes,0,125,'Regular school',High,No,'Not Applicable'
+TX,06,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',21,200,'Regular school',Middle,No,No
+TX,05,08,'Not Virtual',Rural,1-Yes,1-Yes,0,127,'Regular school',Middle,No,No
+SD,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,0,8,'Regular school',Elementary,No,Missing
+MI,12,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',5,19,'Special education school',High,No,No
+CA,KG,08,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',0,3,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',9,227,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',32,249,'Regular school',Elementary,No,No
+OH,06,08,'Not Virtual',Rural,1-Yes,2-No,1,226,'Regular school',Middle,No,'Not Applicable'
+VA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,2,185,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,9,26,'Regular school',High,No,No
+KY,09,12,'Supplemental Virtual',Town,1-Yes,1-Yes,0,228,'Regular school',High,Missing,No
+OR,06,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',0,1,'Regular school',High,No,Missing
+AL,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,0,'Regular school',Middle,No,No
+NC,09,12,'Supplemental Virtual',Rural,1-Yes,2-No,0,221,'Regular school',High,No,No
+OH,07,08,'Not Virtual',Suburb,1-Yes,1-Yes,2,191,'Regular school',Middle,No,'Not Applicable'
+CA,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',211,661,'Regular school',High,No,No
+GA,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',25,156,'Regular school',Elementary,No,No
+MI,09,12,'Not Virtual',Suburb,1-Yes,2-No,0,402,'Regular school',High,No,No
+FL,04,08,'Not Virtual',Rural,1-Yes,1-Yes,3,15,'Regular school',Middle,No,Yes
+KS,09,12,'Not Virtual',Town,1-Yes,1-Yes,3,486,'Regular school',High,No,No
+OR,06,08,'Not Virtual',City,1-Yes,1-Yes,9,169,'Regular school',Middle,No,Missing
+WI,PK,05,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,41,'Regular school',Elementary,No,No
+AK,09,12,'Supplemental Virtual',City,1-Yes,1-Yes,136,142,'Regular school',High,No,No
+TX,09,12,'Not Virtual',Town,1-Yes,1-Yes,2,103,'Regular school',High,No,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,0,4,'Alternative/other school',High,Yes,No
+CO,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,13,27,'Regular school',Elementary,No,No
+OH,PK,01,'Not Virtual',Suburb,1-Yes,1-Yes,13,291,'Regular school',Elementary,No,'Not Applicable'
+MI,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',2,450,'Regular school',High,No,No
+ID,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',2,205,'Regular school',Elementary,No,No
+MI,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,1,270,'Regular school',Middle,No,No
+OH,PK,05,'Not Virtual',Suburb,1-Yes,2-No,3,123,'Regular school',Elementary,No,'Not Applicable'
+TX,KG,04,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,Yes,No
+CA,07,12,'Not Virtual',Town,1-Yes,1-Yes,0,2,'Alternative/other school',High,No,No
+WI,06,12,'Supplemental Virtual',Rural,1-Yes,2-No,0,5,'Alternative/other school',High,No,No
+GA,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',1,258,'Regular school',Elementary,No,No
+GA,07,12,'Not Virtual',Rural,1-Yes,1-Yes,0,12,'Regular school',High,No,No
+NY,06,08,'Not Virtual',Town,1-Yes,2-No,8,153,'Regular school',Middle,No,No
+AK,09,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',0,152,'Regular school',High,No,No
+MT,09,12,'Supplemental Virtual',Rural,1-Yes,2-No,13,588,'Regular school',High,Missing,Missing
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,8,216,'Regular school',Middle,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,39,'Regular school',Elementary,No,No
+NY,KG,04,'Not Virtual',Suburb,1-Yes,1-Yes,7,131,'Regular school',Elementary,No,No
+NE,PK,PK,'Not Virtual',Town,'Not Applicable','Not Applicable',0,34,'Regular school',Prekindergarten,Missing,Missing
+OH,05,08,'Not Virtual',Suburb,1-Yes,1-Yes,13,91,'Regular school',Middle,No,'Not Applicable'
+TX,PK,04,'Not Virtual',Suburb,1-Yes,1-Yes,1,4,'Regular school',Elementary,No,No
+SC,KG,08,'Supplemental Virtual',City,1-Yes,1-Yes,4,96,'Regular school',Elementary,Yes,No
+IL,KG,04,'Not Virtual',Rural,'Not Applicable','Not Applicable',6,310,'Regular school',Elementary,No,No
+MT,07,08,'Not Virtual',Rural,1-Yes,2-No,0,28,'Regular school',Middle,Missing,Missing
+CA,07,08,'Supplemental Virtual',City,1-Yes,1-Yes,56,56,'Regular school',Middle,No,No
+NC,09,12,'Not Virtual',Suburb,1-Yes,2-No,11,352,'Regular school',High,No,No
+NY,01,06,'Not Virtual',Suburb,1-Yes,2-No,65,36,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,25,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,16,178,'Regular school',Elementary,No,No
+FL,KG,12,'Not Virtual',City,'Not Applicable','Not Applicable',1,24,'Special education school',Other,No,No
+TX,06,09,'Not Virtual',Suburb,1-Yes,1-Yes,0,34,'Regular school',Middle,No,No
+MI,09,12,'Not Virtual',City,'Not Applicable','Not Applicable',12,354,'Regular school',High,No,No
+WI,PK,05,'Supplemental Virtual',City,'Not Applicable','Not Applicable',1,60,'Regular school',Elementary,Yes,No
+NC,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,82,'Regular school',Elementary,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,429,32,'Regular school',Elementary,No,No
+CA,KG,06,'Not Virtual',Suburb,1-Yes,1-Yes,206,54,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,1,49,'Regular school',Elementary,No,No
+GA,03,05,'Not Virtual',Rural,1-Yes,1-Yes,0,216,'Regular school',Elementary,No,No
+NC,05,08,'Not Virtual',Rural,1-Yes,1-Yes,0,27,'Regular school',Middle,No,No
+NC,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,9,152,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,210,'Regular school',Elementary,No,No
+CA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,6,57,'Regular school',Elementary,No,No
+NV,PK,04,'Not Virtual',Town,1-Yes,1-Yes,5,209,'Regular school',Elementary,No,No
+AZ,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,19,'Regular school',Middle,No,'Not Applicable'
+VA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',106,217,'Regular school',Middle,No,Yes
+PA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,146,'Regular school',Elementary,No,No
+VA,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',178,136,'Regular school',Elementary,No,No
+MI,PK,12,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Other,Yes,No
+MI,09,12,'Not Virtual',City,1-Yes,1-Yes,0,5,'Regular school',High,No,No
+GA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,15,315,'Regular school',Elementary,No,No
+MI,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,19,'Alternative/other school',High,No,No
+NY,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,119,'Regular school',Elementary,No,No
+AZ,KG,08,'Not Virtual',City,1-Yes,1-Yes,1,199,'Regular school',Elementary,No,'Not Applicable'
+MO,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,109,'Regular school',Elementary,No,No
+NC,06,08,'Supplemental Virtual',Rural,1-Yes,1-Yes,12,65,'Regular school',Middle,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,4,'Regular school',Elementary,No,No
+PA,07,09,'Not Virtual',Rural,'Not Applicable','Not Applicable',40,420,'Regular school',Middle,No,No
+NC,PK,05,'Not Virtual',Town,1-Yes,1-Yes,1,156,'Regular school',Elementary,No,No
+NJ,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',86,34,'Regular school',Elementary,No,Missing
+WY,PK,06,'Not Virtual',City,1-Yes,1-Yes,1,106,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',City,1-Yes,1-Yes,30,36,'Regular school',Elementary,No,No
+OR,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,0,76,'Regular school',Elementary,Yes,Missing
+WA,PK,05,'Not Virtual',City,1-Yes,1-Yes,25,34,'Regular school',Elementary,No,No
+AL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,7,'Regular school',Elementary,No,No
+AL,08,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,76,'Regular school',High,No,No
+MO,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,39,'Regular school',Elementary,No,No
+AZ,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,27,21,'Regular school',Elementary,No,'Not Applicable'
+VA,04,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',52,97,'Regular school',Middle,No,No
+CA,09,12,'Not Virtual',City,1-Yes,2-No,305,12,'Regular school',High,No,No
+NY,03,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',3,74,'Regular school',Elementary,No,No
+FL,06,08,'Not Virtual',Rural,1-Yes,2-No,16,291,'Regular school',Middle,No,Yes
+NC,KG,08,'Not Virtual',City,'Not Applicable','Not Applicable',4,172,'Regular school',Elementary,Yes,No
+TX,PK,04,'Not Virtual',Rural,1-Yes,1-Yes,0,38,'Regular school',Elementary,No,No
+ID,PK,04,'Not Virtual',Town,1-Yes,2-No,0,179,'Regular school',Elementary,No,No
+MI,UG,UG,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,9,'Special education school',Ungraded,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,6,160,'Regular school',Elementary,No,No
+NC,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,11,217,'Regular school',Middle,No,No
+CA,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,62,152,'Regular school',High,No,No
+ID,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',0,167,'Regular school',Elementary,No,Yes
+MI,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,6,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,21,'Regular school',Middle,No,No
+AZ,09,12,'Not Virtual',Town,1-Yes,1-Yes,1,27,'Regular school',High,No,'Not Applicable'
+AZ,09,12,'Not Virtual',Suburb,1-Yes,2-No,15,652,'Regular school',High,No,'Not Applicable'
+PA,KG,08,'Not Virtual',Town,1-Yes,1-Yes,2,204,'Regular school',Elementary,No,No
+OH,PK,04,'Not Virtual',Suburb,1-Yes,2-No,11,267,'Regular school',Elementary,No,'Not Applicable'
+PA,07,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,166,'Regular school',Middle,No,No
+NC,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,1,'Regular school',Elementary,No,No
+ID,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,56,'Regular school',Elementary,No,No
+TX,PK,PK,'Not Virtual',Suburb,1-Yes,1-Yes,3,30,'Regular school',Prekindergarten,No,No
+MI,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,5,74,'Regular school',Elementary,No,No
+TX,PK,PK,'Not Virtual',Suburb,1-Yes,1-Yes,0,3,'Alternative/other school',Prekindergarten,Yes,No
+WA,PK,PK,'Not Virtual',Suburb,'Not Applicable','Not Applicable',29,26,'Regular school',Prekindergarten,No,No
+GA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,3,216,'Regular school',Elementary,No,No
+OH,KG,05,'Not Virtual',Suburb,1-Yes,2-No,4,205,'Regular school',Elementary,No,'Not Applicable'
+RI,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,6,151,'Regular school',High,No,Missing
+OH,05,08,'Not Virtual',Town,1-Yes,1-Yes,12,308,'Regular school',Middle,No,'Not Applicable'
+WI,09,12,'Supplemental Virtual',City,1-Yes,2-No,0,12,'Alternative/other school',High,Yes,No
+NY,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,No
+SC,09,12,'Supplemental Virtual',Rural,Missing,Missing,0,0,'Vocational school',High,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,2,8,'Regular school',Elementary,No,Yes
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,6,162,'Regular school',Elementary,No,No
+AZ,KG,06,'Not Virtual',City,1-Yes,1-Yes,1,88,'Regular school',Elementary,No,'Not Applicable'
+GA,09,12,'Not Virtual',Rural,1-Yes,1-Yes,1,124,'Regular school',High,No,No
+VA,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,0,45,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,8,'Regular school',Elementary,No,No
+NY,05,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',42,204,'Regular school',Middle,No,No
+ND,06,08,'Not Virtual',Town,1-Yes,1-Yes,4,276,'Regular school',Middle,Missing,Missing
+GA,09,12,'Not Virtual',Town,1-Yes,1-Yes,4,310,'Regular school',High,No,No
+OH,PK,06,'Not Virtual',City,'Not Applicable','Not Applicable',5,247,'Regular school',Elementary,No,'Not Applicable'
+OH,06,08,'Not Virtual',Town,1-Yes,1-Yes,2,214,'Regular school',Middle,No,'Not Applicable'
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,2,3,'Regular school',Elementary,No,No
+PA,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',20,189,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',55,250,'Regular school',Elementary,No,No
+AL,PK,08,'Not Virtual',Rural,1-Yes,1-Yes,0,44,'Regular school',Elementary,No,No
+NC,09,12,'Supplemental Virtual',Rural,1-Yes,1-Yes,1,174,'Regular school',High,No,No
+CA,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',79,114,'Regular school',Elementary,No,No
+AL,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',13,55,'Regular school',Middle,No,Yes
+NC,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',10,173,'Regular school',Elementary,No,No
+NE,PK,06,'Not Virtual',City,'Not Applicable','Not Applicable',38,79,'Regular school',Elementary,Missing,Missing
+SD,09,12,'Supplemental Virtual',Rural,1-Yes,2-No,0,26,'Regular school',High,No,Missing
+PA,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,3,220,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',22,213,'Regular school',Elementary,No,No
+MI,05,08,'Not Virtual',Rural,1-Yes,1-Yes,0,26,'Regular school',Middle,No,No
+CA,07,08,'Not Virtual',Suburb,1-Yes,1-Yes,93,30,'Regular school',Middle,No,No
+VA,07,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',3,213,'Regular school',Middle,No,No
+NC,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,27,175,'Regular school',Elementary,No,No
+NV,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,8,47,'Regular school',Middle,No,No
+MI,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,121,'Regular school',Elementary,No,No
+FL,06,12,'Not Virtual',City,1-Yes,1-Yes,0,2,'Alternative/other school',High,No,No
+NM,KG,05,'Not Virtual',City,1-Yes,2-No,7,82,'Regular school',Elementary,No,No
+MO,09,12,'Not Virtual',Town,1-Yes,2-No,4,340,'Regular school',High,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,19,13,'Regular school',Elementary,No,No
+NY,KG,03,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,9,'Regular school',Elementary,No,No
+MN,06,12,'Not Virtual',City,1-Yes,1-Yes,11,97,'Alternative/other school',High,No,No
+RI,KG,05,'Not Virtual',City,1-Yes,1-Yes,8,27,'Regular school',Elementary,No,Missing
+PA,06,08,'Not Virtual',Rural,1-Yes,1-Yes,5,286,'Regular school',Middle,No,No
+MI,UG,UG,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,4,'Regular school',Ungraded,No,No
+NY,06,12,'Not Virtual',Town,'Not Applicable','Not Applicable',6,216,'Regular school',High,No,No
+NC,06,08,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',20,239,'Regular school',Middle,No,No
+NY,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',1,249,'Regular school',High,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,19,10,'Vocational school',High,No,No
+TX,01,06,'Not Virtual',Town,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+OH,03,06,'Not Virtual',Suburb,1-Yes,2-No,11,423,'Regular school',Elementary,No,'Not Applicable'
+FL,06,12,'Not Virtual',Rural,1-Yes,1-Yes,1,302,'Regular school',High,No,No
+FL,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,19,40,'Regular school',Middle,No,Yes
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,8,'Regular school',Elementary,No,No
+UT,07,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,164,'Regular school',High,No,No
+SC,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,57,'Regular school',Elementary,No,No
+TX,12,12,'Not Virtual',City,1-Yes,1-Yes,0,3,'Special education school',High,No,No
+NY,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,1,178,'Regular school',Elementary,No,No
+TX,PK,01,'Not Virtual',Suburb,1-Yes,1-Yes,1,81,'Regular school',Elementary,No,No
+WA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,7,134,'Regular school',Elementary,No,No
+OR,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',3,303,'Regular school',High,No,Missing
+GA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,50,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,1,162,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',City,1-Yes,1-Yes,2,10,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,7,'Regular school',Elementary,No,No
+CO,PK,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',9,240,'Regular school',Elementary,Yes,No
+GA,KG,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,191,'Regular school',Elementary,No,No
+SC,PK,PK,'Not Virtual',City,'Not Applicable','Not Applicable',4,52,'Regular school',Prekindergarten,No,No
+PA,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,111,'Regular school',Elementary,Yes,No
+NY,PK,06,'Not Virtual',Suburb,1-Yes,1-Yes,10,27,'Regular school',Elementary,No,Yes
+NE,PK,06,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,228,'Regular school',Elementary,Missing,Missing
+NC,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,1,108,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',14,526,'Regular school',High,No,No
+WY,07,12,'Not Virtual',Rural,1-Yes,2-No,0,39,'Regular school',High,No,No
+SC,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,0,189,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',46,354,'Regular school',Elementary,No,No
+ID,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,160,'Regular school',Elementary,No,No
+MI,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,298,'Regular school',Elementary,No,No
+VA,KG,06,'Not Virtual',Town,1-Yes,2-No,5,227,'Regular school',Elementary,No,No
+CA,09,12,'Supplemental Virtual',City,1-Yes,2-No,111,309,'Regular school',High,No,Yes
+AZ,09,12,'Not Virtual',Rural,1-Yes,2-No,0,27,'Regular school',High,No,'Not Applicable'
+NY,PK,08,'Not Virtual',City,1-Yes,1-Yes,37,25,'Regular school',Elementary,No,Yes
+TX,KG,05,'Not Virtual',City,1-Yes,1-Yes,1,1,'Regular school',Elementary,Yes,No
+CA,09,12,'Not Virtual',City,1-Yes,2-No,50,145,'Regular school',High,No,No
+OR,06,08,'Supplemental Virtual',Town,1-Yes,1-Yes,0,44,'Regular school',Middle,No,Missing
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,2,3,'Regular school',Middle,No,No
+CA,KG,06,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+CA,KG,05,'Not Virtual',Town,1-Yes,1-Yes,35,75,'Regular school',Elementary,No,No
+MI,PK,12,'Not Virtual',City,1-Yes,1-Yes,21,243,'Regular school',Other,Yes,No
+TX,06,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',1,5,'Alternative/other school',High,No,No
+GA,PK,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',7,102,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,188,'Regular school',Elementary,No,No
+TX,PK,04,'Not Virtual',City,'Not Applicable','Not Applicable',44,178,'Regular school',Elementary,No,No
+CA,KG,12,'Virtual with face to face options',Suburb,'Not Applicable','Not Applicable',2,21,'Regular school',Other,Yes,No
+OH,KG,06,'Not Virtual',Suburb,1-Yes,2-No,4,256,'Regular school',Elementary,No,'Not Applicable'
+AL,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',37,201,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',8,105,'Regular school',Elementary,No,Yes
+RI,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,5,79,'Regular school',Elementary,No,Missing
+CA,09,12,'Not Virtual',Rural,1-Yes,1-Yes,2,3,'Alternative/other school',High,No,No
+TX,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',82,113,'Regular school',Elementary,No,No
+FL,05,12,'Not Virtual',Suburb,1-Yes,1-Yes,4,43,'Alternative/other school',High,No,No
+MI,06,08,'Not Virtual',Suburb,1-Yes,2-No,20,233,'Regular school',Middle,No,No
+AL,PK,05,'Not Virtual',Town,1-Yes,1-Yes,1,124,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,5,142,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',20,166,'Regular school',Elementary,No,No
+FL,09,12,'Not Virtual',Rural,1-Yes,1-Yes,26,714,'Regular school',High,No,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,0,4,'Regular school',High,No,No
+NY,09,12,'Not Virtual',Town,1-Yes,1-Yes,6,457,'Regular school',High,No,No
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,35,11,'Regular school',Middle,No,No
+WA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',30,319,'Regular school',Middle,No,No
+AL,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,81,'Regular school',Elementary,No,No
+AK,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,50,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,0,18,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,0,0,'Alternative/other school',High,Yes,No
+AZ,09,12,'Not Virtual',Town,1-Yes,2-No,1,27,'Regular school',High,No,'Not Applicable'
+VA,02,05,'Not Virtual',Town,1-Yes,1-Yes,2,155,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',27,190,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,183,'Regular school',Elementary,No,No
+TX,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,1,10,'Regular school',Elementary,No,No
+WA,07,12,'Not Virtual',Suburb,1-Yes,1-Yes,1,25,'Alternative/other school',High,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,9,5,'Regular school',Elementary,No,No
+MI,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',6,390,'Regular school',High,No,No
+PA,04,06,'Not Virtual',Suburb,1-Yes,1-Yes,2,148,'Regular school',Middle,No,No
+KS,KG,07,'Not Virtual',City,'Not Applicable','Not Applicable',0,7,'Regular school',Elementary,No,No
+GA,PK,05,'Not Virtual',Town,1-Yes,1-Yes,20,167,'Regular school',Elementary,No,No
+OH,04,06,'Not Virtual',Suburb,1-Yes,1-Yes,0,8,'Regular school',Middle,No,'Not Applicable'
+NY,06,12,'Not Virtual',Rural,1-Yes,2-No,2,196,'Regular school',High,No,No
+OR,06,08,'Not Virtual',City,1-Yes,1-Yes,61,162,'Regular school',Middle,No,Missing
+PA,05,08,'Not Virtual',Suburb,1-Yes,1-Yes,31,288,'Regular school',Middle,No,No
+NC,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,1,222,'Regular school',Elementary,No,No
+OR,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,3,154,'Regular school',Elementary,No,Missing
+PA,KG,12,'Not Virtual',City,1-Yes,1-Yes,18,455,'Regular school',Other,Yes,No
+OR,KG,05,'Supplemental Virtual',City,1-Yes,1-Yes,3,120,'Regular school',Elementary,No,Missing
+PA,08,12,'Not Virtual',Suburb,1-Yes,2-No,16,404,'Regular school',High,No,No
+NC,09,12,'Supplemental Virtual',City,1-Yes,1-Yes,12,174,'Regular school',High,No,No
+NY,PK,06,'Not Virtual',City,1-Yes,1-Yes,0,19,'Regular school',Elementary,No,No
+TX,PK,KG,'Not Virtual',Suburb,1-Yes,1-Yes,2,131,'Regular school',Elementary,No,No
+WA,PK,08,'Not Virtual',Rural,1-Yes,2-No,0,17,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,1,28,'Regular school',Elementary,No,Yes
+MI,KG,04,'Not Virtual',Suburb,1-Yes,2-No,44,143,'Regular school',Elementary,No,No
+PA,KG,08,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,Yes,No
+NC,11,12,'Not Virtual',City,'Not Applicable','Not Applicable',14,70,'Regular school',High,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,41,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',6,40,'Regular school',Elementary,No,Yes
+PA,KG,06,'Not Virtual',Rural,1-Yes,1-Yes,0,394,'Regular school',Elementary,No,No
+OH,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,0,0,'Regular school',Elementary,Yes,'Not Applicable'
+FL,04,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,10,'Alternative/other school',Other,No,No
+CA,07,08,'Not Virtual',City,'Not Applicable','Not Applicable',296,24,'Regular school',Middle,No,No
+CA,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',532,197,'Regular school',High,No,Yes
+AL,PK,06,'Not Virtual',Rural,1-Yes,1-Yes,0,160,'Regular school',Elementary,No,No
+NY,09,12,'Not Virtual',City,1-Yes,1-Yes,8,7,'Regular school',High,No,No
+NC,07,08,'Supplemental Virtual',Suburb,1-Yes,1-Yes,20,251,'Regular school',Middle,No,No
+SC,09,12,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',7,455,'Regular school',High,No,No
+SD,03,06,'Not Virtual',Rural,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,Missing
+NE,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',11,259,'Regular school',Elementary,Missing,Missing
+OR,KG,06,'Not Virtual',City,'Not Applicable','Not Applicable',27,129,'Regular school',Elementary,No,Missing
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,2,1,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',Town,1-Yes,1-Yes,0,73,'Regular school',Elementary,No,No
+MI,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',4,194,'Regular school',Elementary,No,No
+NM,PK,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,82,'Regular school',Other,Yes,No
+AZ,07,08,'Not Virtual',City,1-Yes,2-No,6,126,'Regular school',Middle,No,'Not Applicable'
+NC,KG,05,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,106,'Regular school',Elementary,No,No
+OH,09,12,'Not Virtual',Suburb,1-Yes,2-No,12,503,'Regular school',High,No,'Not Applicable'
+MI,04,05,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,1-Yes,1,9,'Alternative/other school',High,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',Elementary,No,No
+NC,PK,05,'Not Virtual',City,1-Yes,1-Yes,23,9,'Regular school',Elementary,No,No
+CA,KG,06,'Not Virtual',Rural,1-Yes,1-Yes,6,148,'Regular school',Elementary,No,No
+MN,07,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,3,'Special education school',High,No,No
+CA,09,12,'Supplemental Virtual',Town,1-Yes,2-No,0,10,'Alternative/other school',High,No,No
+OH,PK,08,'Not Virtual',Town,1-Yes,1-Yes,0,179,'Regular school',Elementary,No,'Not Applicable'
+PA,KG,05,'Not Virtual',City,1-Yes,2-No,20,109,'Regular school',Elementary,No,No
+MO,PK,06,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,63,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,1-Yes,11,4,'Alternative/other school',High,No,No
+WA,06,08,'Supplemental Virtual',City,1-Yes,1-Yes,4,145,'Regular school',Middle,No,No
+OH,07,12,'Not Virtual',Rural,1-Yes,2-No,0,200,'Regular school',High,No,'Not Applicable'
+VA,09,12,'Supplemental Virtual',Town,'Not Applicable','Not Applicable',0,47,'Regular school',High,No,No
+MI,PK,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,19,'Special education school',Other,No,No
+AL,PK,08,'Not Virtual',Rural,1-Yes,1-Yes,0,70,'Regular school',Elementary,No,No
+GA,06,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,40,'Regular school',High,Yes,No
+FL,09,12,'Not Virtual',Town,1-Yes,1-Yes,2,195,'Regular school',High,No,No
+FL,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',2,29,'Alternative/other school',High,Yes,No
+FL,04,12,'Full Virtual',Suburb,'Not Applicable','Not Applicable',1,78,'Regular school',Other,No,No
+PA,09,12,'Not Virtual',Town,1-Yes,1-Yes,0,259,'Regular school',High,No,No
+LA,PK,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,16,'Special education school',Other,No,No
+KY,06,12,'Supplemental Virtual',City,1-Yes,1-Yes,0,44,'Alternative/other school',High,Missing,No
+NE,07,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,91,'Regular school',High,Missing,Missing
+CA,06,08,'Not Virtual',Town,1-Yes,1-Yes,9,96,'Regular school',Middle,No,No
+TX,PK,06,'Not Virtual',City,1-Yes,1-Yes,18,66,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,'Not Applicable','Not Applicable',16,160,'Regular school',Elementary,No,No
+PA,06,08,'Not Virtual',Suburb,1-Yes,2-No,10,136,'Regular school',Middle,No,No
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,0,1,'Regular school',High,No,No
+AL,05,07,'Not Virtual',Rural,1-Yes,1-Yes,0,250,'Regular school',Middle,No,No
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,305,178,'Regular school',Middle,No,No
+OH,07,12,'Not Virtual',Suburb,1-Yes,1-Yes,0,88,'Regular school',High,No,'Not Applicable'
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,24,42,'Regular school',Elementary,No,No
+OH,KG,04,'Not Virtual',Suburb,1-Yes,2-No,70,153,'Regular school',Elementary,No,'Not Applicable'
+ID,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',1,112,'Regular school',High,No,No
+CA,KG,06,'Not Virtual',Suburb,1-Yes,1-Yes,15,15,'Regular school',Elementary,No,No
+PA,03,04,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,148,'Regular school',Elementary,No,No
+TX,06,08,'Not Virtual',City,1-Yes,2-No,9,234,'Regular school',Middle,No,No
+FL,PK,12,'Not Virtual',City,1-Yes,1-Yes,4,22,'Special education school',Other,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,45,'Regular school',Elementary,No,Yes
+AZ,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,No,'Not Applicable'
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,56,25,'Regular school',Elementary,No,No
+WA,PK,06,'Not Virtual',Suburb,1-Yes,1-Yes,24,109,'Regular school',Elementary,No,No
+SD,09,12,'Not Virtual',Rural,1-Yes,2-No,0,36,'Regular school',High,No,Missing
+OH,PK,05,'Not Virtual',Suburb,1-Yes,2-No,41,270,'Regular school',Elementary,No,'Not Applicable'
+NY,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',4,218,'Regular school',High,No,No
+NJ,PK,08,'Not Virtual',City,1-Yes,1-Yes,0,0,'Regular school',Elementary,No,Missing
+TX,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,29,'Regular school',Middle,No,No
+WY,KG,08,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,0,'Special education school',Elementary,No,No
+NY,03,05,'Not Virtual',Rural,1-Yes,2-No,1,307,'Regular school',Elementary,No,No
+FL,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',13,442,'Regular school',Middle,No,No
+CA,KG,12,'Virtual with face to face options',City,'Not Applicable','Not Applicable',3,109,'Regular school',Other,Yes,No
+VA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',16,139,'Regular school',Middle,No,No
+TX,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,26,'Regular school',High,No,No
+TX,09,12,'Not Virtual',Town,1-Yes,1-Yes,0,88,'Regular school',High,No,No
+MI,PK,05,'Not Virtual',Town,1-Yes,1-Yes,0,192,'Regular school',Elementary,No,No
+GA,PK,KG,'Not Virtual',Rural,1-Yes,1-Yes,3,150,'Regular school',Elementary,No,No
+VA,06,08,'Not Virtual',Town,'Not Applicable','Not Applicable',1,211,'Regular school',Middle,No,No
+PA,06,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',4,373,'Regular school',Middle,No,No
+OR,06,08,'Supplemental Virtual',Suburb,'Not Applicable','Not Applicable',1,197,'Regular school',Middle,No,Missing
+VA,PK,06,'Not Virtual',City,'Not Applicable','Not Applicable',94,181,'Regular school',Elementary,No,Yes
+TX,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',40,90,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,13,50,'Regular school',Elementary,No,No
+ND,PK,05,'Not Virtual',City,1-Yes,1-Yes,11,95,'Regular school',Elementary,Missing,Missing
+MT,PK,05,'Not Virtual',Town,1-Yes,1-Yes,1,222,'Regular school',Elementary,Missing,Missing
+FL,PK,08,'Not Virtual',Suburb,1-Yes,1-Yes,30,137,'Regular school',Elementary,No,Yes
+TX,09,12,'Not Virtual',City,1-Yes,1-Yes,137,65,'Regular school',High,No,Yes
+OR,KG,05,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,109,'Regular school',Elementary,No,Missing
+SC,09,12,'Supplemental Virtual',Town,1-Yes,1-Yes,3,272,'Regular school',High,No,No
+AZ,KG,06,'Not Virtual',City,1-Yes,2-No,0,189,'Regular school',Elementary,No,'Not Applicable'
+OR,KG,08,'Not Virtual',Rural,1-Yes,1-Yes,0,90,'Regular school',Elementary,No,Missing
+TX,PK,04,'Not Virtual',Suburb,1-Yes,1-Yes,0,14,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,No,No
+TX,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,24,34,'Regular school',High,Yes,No
+GA,PK,05,'Not Virtual',Rural,1-Yes,1-Yes,19,130,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',City,1-Yes,1-Yes,15,57,'Regular school',Elementary,No,No
+SD,06,08,'Not Virtual',Rural,1-Yes,1-Yes,0,18,'Regular school',Middle,No,Missing
+CA,09,12,'Supplemental Virtual',Suburb,1-Yes,1-Yes,29,51,'Regular school',High,No,No
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,3,111,'Regular school',Middle,No,No
+NY,PK,05,'Not Virtual',City,1-Yes,1-Yes,72,243,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,2,57,'Regular school',Elementary,No,No
+VA,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',19,48,'Regular school',Elementary,No,No
+NC,KG,05,'Not Virtual',City,'Not Applicable','Not Applicable',5,120,'Regular school',Elementary,No,Yes
+SC,PK,05,'Not Virtual',Town,1-Yes,1-Yes,4,134,'Regular school',Elementary,No,No
+NY,KG,05,'Not Virtual',Suburb,1-Yes,1-Yes,44,162,'Regular school',Elementary,No,No
+PA,KG,03,'Not Virtual',Suburb,1-Yes,1-Yes,0,82,'Regular school',Elementary,No,No
+NY,03,04,'Not Virtual',Suburb,1-Yes,2-No,5,103,'Regular school',Elementary,No,No
+GA,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',0,443,'Regular school',High,No,No
+MT,PK,05,'Not Virtual',City,1-Yes,2-No,0,108,'Regular school',Elementary,Missing,Missing
+TX,KG,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',30,162,'Regular school',Elementary,No,No
+NY,KG,03,'Not Virtual',City,1-Yes,1-Yes,3,0,'Regular school',Elementary,Yes,No
+VA,PK,05,'Not Virtual',City,1-Yes,1-Yes,22,33,'Regular school',Elementary,No,No
+NY,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',324,121,'Regular school',Middle,No,No
+NE,07,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,39,'Regular school',High,Missing,Missing
+AL,09,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,179,'Regular school',High,No,No
+PA,07,12,'Not Virtual',Town,'Not Applicable','Not Applicable',1,433,'Regular school',High,No,No
+KY,06,08,'Not Virtual',City,1-Yes,1-Yes,27,236,'Regular school',Middle,Missing,No
+NC,PK,03,'Not Virtual',Rural,1-Yes,1-Yes,0,11,'Regular school',Elementary,No,No
+AK,PK,06,'Not Virtual',Suburb,'Not Applicable','Not Applicable',3,147,'Regular school',Elementary,No,No
+CA,07,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',0,2,'Alternative/other school',High,No,No
+OH,KG,08,'Not Virtual',City,1-Yes,1-Yes,2,166,'Regular school',Elementary,Yes,'Not Applicable'
+IA,05,12,'Supplemental Virtual',Rural,'Not Applicable','Not Applicable',2,13,'Alternative/other school',High,No,Missing
+NC,PK,05,'Not Virtual',Rural,'Not Applicable','Not Applicable',7,266,'Regular school',Elementary,No,No
+NY,PK,04,'Not Virtual',Town,1-Yes,1-Yes,1,134,'Regular school',Elementary,No,No
+CA,09,12,'Not Virtual',City,1-Yes,2-No,110,532,'Regular school',High,No,No
+KS,07,12,'Not Virtual',Rural,1-Yes,2-No,0,59,'Regular school',High,No,No
+TX,PK,02,'Not Virtual',City,1-Yes,1-Yes,10,143,'Regular school',Elementary,No,No
+MI,09,12,'Not Virtual',City,1-Yes,1-Yes,0,2,'Regular school',High,No,Yes
+VA,PK,05,'Not Virtual',Town,1-Yes,1-Yes,0,108,'Regular school',Elementary,No,No
+TX,KG,04,'Not Virtual',Town,1-Yes,1-Yes,1,22,'Regular school',Elementary,No,No
+AL,PK,02,'Not Virtual',Town,1-Yes,1-Yes,1,61,'Regular school',Elementary,No,No
+CA,KG,05,'Not Virtual',Town,1-Yes,1-Yes,34,43,'Regular school',Elementary,No,No
+NJ,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',9,108,'Regular school',Elementary,No,Missing
+MI,06,08,'Not Virtual',Rural,1-Yes,2-No,0,72,'Regular school',Middle,No,No
+MO,09,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',33,762,'Regular school',High,No,No
+PA,KG,12,'Not Virtual',Suburb,1-Yes,1-Yes,41,292,'Regular school',Other,Yes,No
+NY,05,12,'Not Virtual',City,1-Yes,1-Yes,2,5,'Regular school',High,Yes,No
+TX,05,08,'Not Virtual',Rural,1-Yes,1-Yes,0,59,'Regular school',Middle,No,No
+NC,06,08,'Supplemental Virtual',Rural,1-Yes,1-Yes,3,53,'Regular school',Middle,No,No
+GA,PK,05,'Not Virtual',Suburb,1-Yes,1-Yes,15,65,'Regular school',Elementary,No,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,2,216,'Regular school',Middle,No,'Not Applicable'
+TX,KG,04,'Not Virtual',Town,1-Yes,1-Yes,0,39,'Regular school',Elementary,No,No
+FL,PK,06,'Not Virtual',City,1-Yes,1-Yes,7,128,'Regular school',Elementary,No,No
+ID,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,1,49,'Alternative/other school',Middle,No,No
+KY,09,12,'Not Virtual',City,1-Yes,1-Yes,8,802,'Regular school',High,Missing,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,2-No,1,133,'Regular school',Middle,No,'Not Applicable'
+GA,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,1,4,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,10,32,'Regular school',Elementary,No,No
+MO,05,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,0,'Regular school',High,No,No
+TX,PK,04,'Not Virtual',City,'Not Applicable','Not Applicable',8,142,'Regular school',Elementary,No,No
+NY,PK,08,'Not Virtual',City,1-Yes,1-Yes,8,12,'Regular school',Elementary,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,33,'Regular school',Elementary,No,No
+ND,06,08,'Not Virtual',City,1-Yes,1-Yes,6,190,'Regular school',Middle,Missing,Missing
+ID,05,06,'Not Virtual',Rural,1-Yes,1-Yes,1,102,'Regular school',Middle,No,No
+AK,KG,05,'Not Virtual',Town,1-Yes,1-Yes,3,139,'Regular school',Elementary,No,No
+NV,PK,05,'Not Virtual',City,1-Yes,1-Yes,23,111,'Regular school',Elementary,No,No
+MO,06,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',0,16,'Regular school',High,No,No
+FL,PK,04,'Not Virtual',Town,1-Yes,1-Yes,1,386,'Regular school',Elementary,No,No
+TX,07,08,'Not Virtual',City,1-Yes,1-Yes,9,37,'Regular school',Middle,No,No
+MT,09,12,'Supplemental Virtual',Rural,1-Yes,1-Yes,0,7,'Regular school',High,Missing,Missing
+FL,KG,08,'Not Virtual',Suburb,1-Yes,1-Yes,3,88,'Regular school',Elementary,Yes,No
+TX,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,1,3,'Regular school',Middle,No,No
+MT,PK,05,'Not Virtual',Rural,1-Yes,2-No,0,83,'Regular school',Elementary,Missing,Missing
+MT,PK,06,'Not Virtual',Town,'Not Applicable','Not Applicable',3,178,'Regular school',Elementary,Missing,Missing
+MI,PK,05,'Not Virtual',Rural,1-Yes,2-No,2,284,'Regular school',Elementary,No,No
+OR,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',1,38,'Regular school',High,No,Missing
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,16,159,'Regular school',Elementary,No,No
+PA,06,08,'Not Virtual',Rural,1-Yes,2-No,7,397,'Regular school',Middle,No,No
+TX,07,08,'Not Virtual',Suburb,'Not Applicable','Not Applicable',82,182,'Regular school',Middle,No,No
+FL,06,08,'Not Virtual',Town,1-Yes,1-Yes,3,31,'Regular school',Middle,No,No
+TX,KG,12,'Not Virtual',Suburb,'Not Applicable','Not Applicable',550,6,'Regular school',Other,Yes,No
+MI,KG,05,'Not Virtual',Rural,1-Yes,1-Yes,1,195,'Regular school',Elementary,No,No
+NM,06,08,'Not Virtual',Rural,1-Yes,1-Yes,4,109,'Regular school',Middle,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,3,88,'Regular school',Elementary,No,No
+OH,06,08,'Not Virtual',Suburb,1-Yes,1-Yes,28,105,'Regular school',Middle,No,'Not Applicable'
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,6,37,'Regular school',Elementary,No,No
+MN,09,12,'Not Virtual',Town,'Not Applicable','Not Applicable',0,3,'Special education school',High,No,No
+TX,PK,04,'Not Virtual',City,1-Yes,1-Yes,0,3,'Regular school',Elementary,Yes,No
+NM,PK,12,'Not Virtual',Rural,'Not Applicable','Not Applicable',2,56,'Regular school',Other,Yes,No
+NY,06,08,'Not Virtual',City,'Not Applicable','Not Applicable',15,97,'Regular school',Middle,No,No
+TX,09,12,'Not Virtual',Suburb,1-Yes,1-Yes,1,87,'Regular school',High,No,No
+SD,04,05,'Not Virtual',Town,1-Yes,1-Yes,33,75,'Regular school',Elementary,No,Missing
+TX,09,12,'Not Virtual',Town,1-Yes,1-Yes,4,112,'Regular school',High,No,No
+TX,PK,05,'Not Virtual',City,1-Yes,1-Yes,4,4,'Regular school',Elementary,No,No
+FL,PK,05,'Not Virtual',Suburb,'Not Applicable','Not Applicable',44,274,'Regular school',Elementary,No,No
+AZ,09,12,'Not Virtual',Rural,1-Yes,1-Yes,0,0,'Regular school',High,No,'Not Applicable'
+NY,06,08,'Not Virtual',City,1-Yes,1-Yes,2,2,'Regular school',Middle,No,No
+ID,09,12,'Not Virtual',Town,1-Yes,1-Yes,0,14,'Alternative/other school',High,No,No
+MI,PK,03,'Not Virtual',Suburb,'Not Applicable','Not Applicable',14,120,'Regular school',Elementary,No,No
